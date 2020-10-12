@@ -24,16 +24,16 @@ public class LoadDatabase {
     public CommandLineRunner initDatabase(TweetRepository tweetRepository, TagRepository tagRepository) {
         return args -> {
             List<String> hashs = new ArrayList<String>();
-            hashs.add("#openbanking");
-            hashs.add("#apifirst");
-            hashs.add("#devops");
-            hashs.add("#cloudfirst");
-            hashs.add("#microservices");
-            hashs.add("#apigateway");
+            //hashs.add("#openbanking");
+            //hashs.add("#apifirst");
+            //hashs.add("#devops");
+            //hashs.add("#cloudfirst");
+            //hashs.add("#microservices");
+            //hashs.add("#apigateway");
             hashs.add("#oauth");
             hashs.add("#swagger");
-            hashs.add("#raml");
-            hashs.add("#openapis");
+            //hashs.add("#raml");
+            //hashs.add("#openapis");
 
             TwitterUtils twitterUtils = new TwitterUtils();
             List<Status> statuses = twitterUtils.getStatusByHashtags(hashs);

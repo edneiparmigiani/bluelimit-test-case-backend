@@ -4,7 +4,6 @@ import br.com.bluelimit.entities.UserEntity;
 import br.com.bluelimit.repositories.UserRepository;
 import br.com.bluelimit.twetter.TwitterUtils;
 import br.com.bluelimit.vo.UserTopFiveWithMoreFollowersVO;
-import io.swagger.annotations.ApiOperation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,7 +27,7 @@ public class UserResource {
     @Autowired
     private UserRepository userRepository;
 
-    @ApiOperation(value = "Retorna os 5 Usuários com mais seguidores")
+    //@ApiOperation(value = "Retorna os 5 Usuários com mais seguidores")
     @RequestMapping(value = "/user-top-five", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<List<UserTopFiveWithMoreFollowersVO>> getFiveUsersWithMoreFollowers() {
         List<UserEntity> users = userRepository.findTop5ByOrderByFollowersDesc();
